@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>User Defined Function</h2>
+
+<input type="number" id="n1" placeholder="Enter first number">
+<input type="number" id="n2" placeholder="Enter second number">
+
+<button onclick="addNumbers()">Add</button>
+
+<p id="result"></p>
+
+<script>
+function add(a, b) {
+    return a + b;
+}
+
+function addNumbers() {
+    let x = Number(document.getElementById("n1").value);
+    let y = Number(document.getElementById("n2").value);
+
+    let sum = add(x, y);
+
+    document.getElementById("result").innerHTML = "Sum = " + sum;
+}
+</script>
+
+</body>
+</html>

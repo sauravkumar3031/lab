@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Time Based Greeting</h2>
+<p id="greet"></p>
+
+<script>
+let time = new Date().getHours();
+let message;
+
+if (time < 12) {
+    message = "Good Morning";
+} else {
+    message = "Good Day";
+}
+
+document.getElementById("greet").innerHTML = message;
+</script>
+
+</body>
+</html>

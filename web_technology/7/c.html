@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Marks Calculation</h2>
+
+<input type="number" id="m1" placeholder="Subject 1"><br>
+<input type="number" id="m2" placeholder="Subject 2"><br>
+<input type="number" id="m3" placeholder="Subject 3"><br>
+<input type="number" id="m4" placeholder="Subject 4"><br>
+<input type="number" id="m5" placeholder="Subject 5"><br>
+<input type="number" id="m6" placeholder="Subject 6"><br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<p id="res"></p>
+
+<script>
+function calculate() {
+    let marks = [
+        Number(m1.value),
+        Number(m2.value),
+        Number(m3.value),
+        Number(m4.value),
+        Number(m5.value),
+        Number(m6.value)
+    ];
+
+    let total = 0;
+    let valid = true;
+
+    for (let i = 0; i < marks.length; i++) {
+        if (marks[i] < 0 || marks[i] > 50) {
+            valid = false;
+            break;
+        }
+        total += marks[i];
+    }
+
+    if (!valid) {
+        document.getElementById("res").innerHTML = "Invalid Marks Entered";
+    } else {
+        let percent = (total / 300) * 100;
+        document.getElementById("res").innerHTML =
+            "Total = " + total + "<br>Percentage = " + percent.toFixed(2) + "%";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Income Check</h2>
+
+<input type="number" id="income" placeholder="Enter income">
+<button onclick="checkIncome()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function checkIncome() {
+    let income = Number(document.getElementById("income").value);
+
+    if (income < 10000) {
+        document.getElementById("result").innerHTML = "Below Poverty Line";
+    } else {
+        document.getElementById("result").innerHTML = "Above Poverty Line";
+    }
+}
+</script>
+
+</body>
+</html>

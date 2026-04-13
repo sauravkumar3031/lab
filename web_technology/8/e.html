@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exception Handling</h2>
+
+<p id="msg"></p>
+
+<script>
+try {
+    let a = 10;
+    let b = 0;
+
+    if (b == 0) {
+        throw "Division by zero error";
+    }
+
+    let c = a / b;
+    document.getElementById("msg").innerHTML = c;
+
+} catch (error) {
+    document.getElementById("msg").innerHTML = "Error: " + error;
+}
+</script>
+
+</body>
+</html>

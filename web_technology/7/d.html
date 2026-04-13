@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Employee Tax Calculation</h2>
+
+<button onclick="calculateTax()">Calculate Tax</button>
+
+<p id="output"></p>
+
+<script>
+function calculateTax() {
+
+    let result = "";
+
+    for (let i = 1; i <= 10; i++) {
+
+        let id = prompt("Enter Employee ID " + i);
+        let name = prompt("Enter Employee Name " + i);
+        let salary = Number(prompt("Enter Annual Salary " + i));
+
+        let tax = 0;
+
+        if (salary >= 2000000) {
+            tax = salary * 0.08;
+        } else if (salary >= 1500000) {
+            tax = salary * 0.05;
+        } else if (salary >= 1000000) {
+            tax = salary * 0.03;
+        }
+
+        result += "ID: " + id + ", Name: " + name + ", Tax: " + tax + "<br>";
+    }
+
+    document.getElementById("output").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

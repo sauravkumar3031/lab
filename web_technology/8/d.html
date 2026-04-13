@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Events</h2>
+
+<button onclick="clickEvent()">Click Me</button>
+<br><br>
+
+<input type="text" onkeyup="keyEvent()" placeholder="Type here">
+
+<p id="out"></p>
+
+<script>
+function clickEvent() {
+    document.getElementById("out").innerHTML = "Button Clicked!";
+}
+
+function keyEvent() {
+    document.getElementById("out").innerHTML = "Key Pressed!";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Day of Week</h2>
+
+<input type="number" id="day" placeholder="Enter 1-7">
+<button onclick="showDay()">Show Day</button>
+
+<p id="output"></p>
+
+<script>
+function showDay() {
+    let d = Number(document.getElementById("day").value);
+    let dayName;
+
+    if (d < 1 || d > 7) {
+        dayName = "Invalid Input";
+    } else {
+        switch(d) {
+            case 1: dayName = "Monday"; break;
+            case 2: dayName = "Tuesday"; break;
+            case 3: dayName = "Wednesday"; break;
+            case 4: dayName = "Thursday"; break;
+            case 5: dayName = "Friday"; break;
+            case 6: dayName = "Saturday"; break;
+            case 7: dayName = "Sunday"; break;
+        }
+    }
+
+    document.getElementById("output").innerHTML = dayName;
+}
+</script>
+
+</body>
+</html>

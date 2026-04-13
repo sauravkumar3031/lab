@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects Demo</h2>
+
+<p id="demo"></p>
+
+<script>
+// Array
+let arr = [10, 20, 30, 40];
+let arrSum = arr.reduce((a, b) => a + b);
+
+// Date
+let date = new Date();
+
+// Math
+let rand = Math.random() * 100;
+
+// String
+let str = "javascript";
+let upper = str.toUpperCase();
+
+document.getElementById("demo").innerHTML =
+"Array Sum: " + arrSum + "<br>" +
+"Date: " + date + "<br>" +
+"Random Number: " + rand + "<br>" +
+"String Uppercase: " + upper;
+</script>
+
+</body>
+</html>
